@@ -65,11 +65,7 @@ export const fetchDailyPuzzle = async (): Promise<DailyPuzzleData | null> => {
           try {
             // Fix single quotes to double quotes for valid JSON
             const solutionJson = values[4].replace(/'/g, '"');
-            const parsedSolution = JSON.parse(solutionJson);
-            // Map helmet -> racket, football -> ball in solution
-            solution = parsedSolution.map(row => 
-              row.map(cell => cell === 'helmet' ? 'racket' : cell === 'football' ? 'ball' : cell)
-            );
+            solution = JSON.parse(solutionJson);
           } catch (error) {
             throw new Error(`Invalid solution JSON: ${error.message}`);
           }
@@ -171,22 +167,9 @@ export const fetchPuzzleByDate = async (targetDate: string): Promise<DailyPuzzle
         try {
           // Parse the puzzle data (same logic as fetchDailyPuzzle)
           const preFilledCellsJson = values[2].replace(/'/g, '"');
-          const parsedPreFilledCells = JSON.parse(preFilledCellsJson);
-          // Map helmet -> racket, football -> ball
-          const preFilledCells = parsedPreFilledCells.map(cell => ({
-            ...cell,
-            value: cell.value === 'helmet' ? 'racket' : cell.value === 'football' ? 'ball' : cell.value
-          }));
-          
-          const constraintsJson = values[3].replace(/'/g, '"');
-          const constraints = JSON.parse(constraintsJson);
-          
+          const preFilledCells = JSON.parse(preFilledCellsJson);
           const solutionJson = values[4].replace(/'/g, '"');
-          const parsedSolution = JSON.parse(solutionJson);
-          // Map helmet -> racket, football -> ball in solution
-          const solution = parsedSolution.map(row => 
-            row.map(cell => cell === 'helmet' ? 'racket' : cell === 'football' ? 'ball' : cell)
-          );
+          const solution = JSON.parse(solutionJson);
           
           // Validate that pre-filled cells match the solution
           let hasValidationErrors = false;
