@@ -1,6 +1,6 @@
 import React from 'react';
 import { Cell, CellValue, ConstraintType } from '../types/game';
-import RacketIcon from '../assets/racket.svg?react';
+import RacketIcon from './RacketSvgIcon';
 
 interface GameGridProps {
   grid: Cell[][];

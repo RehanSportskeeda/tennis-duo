@@ -1,7 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { trackModalOpen, trackModalClose } from '../utils/analytics';
-import RacketIcon from '../assets/racket.svg?react';
+import RacketIcon from './RacketSvgIcon';
 
 interface RulesModalProps {
   isOpen: boolean;
