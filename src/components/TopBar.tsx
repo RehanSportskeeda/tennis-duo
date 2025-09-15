@@ -24,7 +24,6 @@ const TopBar: React.FC<TopBarProps> = ({
   return (
     <>
       <div className="bg-red-600 text-white shadow-lg" style={{ backgroundColor: '#cc3333' }}>
-      <div className="bg-red-600 text-white shadow-lg" style={{ backgroundColor: '#4CAF50' }}>
         <div className="container mx-auto px-4 py-1 md:py-2">
           {/* Single row layout: Game name, tabs, and user profile */}
           <div className="flex items-center justify-between relative">

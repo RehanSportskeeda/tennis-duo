@@ -137,7 +137,7 @@ audio, canvas, embed, iframe:not([id^="google_ads_iframe"]), img, object, svg, v
 }
 
 .nav-menu li.current-page a {
-  color: #4CAF50;
+  color: #cc3333;
   font-weight: 700;
 }
 
