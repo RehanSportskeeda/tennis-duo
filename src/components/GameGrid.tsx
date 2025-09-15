@@ -69,7 +69,7 @@ const GameGrid: React.FC<GameGridProps> = ({
   return (
     <div className="relative">
       <div 
-        className="grid gap-1 w-full max-w-lg mx-auto"
+        className="grid gap-1 w-full max-w-lg lg:max-w-96 mx-auto"
         style={{ 
           gridTemplateColumns: `repeat(${size}, 1fr)`,
         }}
