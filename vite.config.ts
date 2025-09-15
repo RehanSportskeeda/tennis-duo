@@ -6,7 +6,6 @@ import { resolve } from 'path';
 export default defineConfig({
   base: '/games/tennis-duo/',
   plugins: [react()],
-  assetsInclude: ['**/*.svg'],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
