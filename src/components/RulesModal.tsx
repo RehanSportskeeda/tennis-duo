@@ -1,7 +1,6 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { trackModalOpen, trackModalClose } from '../utils/analytics';
-import RacketIcon from '../assets/racket.svg?react';
 
 interface RulesModalProps {
   isOpen: boolean;
@@ -86,7 +85,7 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
             <ul className="text-sm text-gray-600 space-y-1">
               <li>• Click a cell to cycle through values:</li>
               <li className="ml-4">1st click → 🎾</li>  
-              <li className="ml-4 flex items-center gap-2">2nd click → <RacketIcon className="inline-block w-4 h-4 align-middle" /></li>  
+              <li className="ml-4">2nd click → racket</li>  
               <li className="ml-4">3rd click → Empty</li>
               <li>• Use hints if you get stuck (adds 15 sec to your time)</li>
               <li>• Try to solve without hints for the best score!</li>
