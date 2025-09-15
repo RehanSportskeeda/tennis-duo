@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cell, CellValue, Constraint, GameState, Puzzle } from '../types/game';
 import { DailyPuzzleData } from './dailyPuzzle';
+import RacketIcon from '../components/RacketSvgIcon';
 
 export const HINT_PENALTY_SECONDS = 15;
 
@@ -32,7 +33,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
           cell1.value === cell2.value && cell2.value === cell3.value) {
         const symbol = cell1.value === 'ball' ? 
           `3 consecutive 🎾 in row ${row + 1}` :
-          `3 consecutive rackets in row ${row + 1}`;
+          <>3 consecutive <RacketIcon className="inline-block w-4 h-4 align-middle mx-1" /> in row {row + 1}</>;
         messages.push(symbol);
         violations.add(`${row},${col}`);
         violations.add(`${row},${col + 1}`);
@@ -51,7 +52,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
           cell1.value === cell2.value && cell2.value === cell3.value) {
         const symbol = cell1.value === 'ball' ? 
           `3 consecutive 🎾 in column ${col + 1}` :
-          `3 consecutive rackets in column ${col + 1}`;
+          <>3 consecutive <RacketIcon className="inline-block w-4 h-4 align-middle mx-1" /> in column {col + 1}</>;
         messages.push(symbol);
         violations.add(`${row},${col}`);
         violations.add(`${row + 1},${col}`);
@@ -72,7 +73,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       if (ballCount > racketCount) {
         messages.push(`${ballCount} 🎾 in row ${row + 1} (should be ${size/2})`);
       } else {
-        messages.push(`${racketCount} rackets in row ${row + 1} (should be ${size/2})`);
+        messages.push(<>{racketCount} <RacketIcon className="inline-block w-4 h-4 align-middle mx-1" /> in row {row + 1} (should be {size/2})</>);
       }
       for (let col = 0; col < size; col++) {
         violations.add(`${row},${col}`);
