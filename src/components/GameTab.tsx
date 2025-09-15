@@ -65,6 +65,7 @@ const GameTab: React.FC<GameTabProps> = ({
       <>
         <div className="container mx-auto px-2 py-8">
           <div className="space-y-6 max-w-xl mx-auto">
+        <div className="space-y-6 max-w-xl lg:max-w-sm mx-auto">
           {/* Game Grid */}
           {dailyPuzzleData && (
             <div className="bg-white rounded-xl shadow-lg p-6">
@@ -294,7 +295,7 @@ Can you beat my time? Play now:`;
     <>
       <div className="container mx-auto px-2 py-8">
         {/* Game Content */}
-        <div className="space-y-6 max-w-xl lg:max-w-lg mx-auto">
+        <div className="space-y-6 max-w-xl lg:max-w-sm mx-auto">
           {/* Game Grid */}
           {dailyPuzzleData && (
             <div className="bg-white rounded-xl shadow-lg p-6">
