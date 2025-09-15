@@ -26,11 +26,14 @@ const GameGrid: React.FC<GameGridProps> = ({
   const getCellKey = (row: number, col: number) => `${row},${col}`;
   
   const isViolated = (row: number, col: number) => {
+    return violations.has(getCellKey(row, col));
   };
   const renderCellContent = (cell: Cell) => {
     if (cell.value === 'ball') {
+      return <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-400 rounded-full"></div>;
     } else if (cell.value === 'racket') {
       return <RacketIcon className="w-8 h-8 sm:w-10 sm:h-10" />;
+    }
     return null;
   };
 
