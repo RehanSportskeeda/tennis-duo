@@ -315,7 +315,7 @@ Can you beat my time? Play now:`;
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle mx-1" />
+                      Fill the grid with 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle" />
                     </p>
                   </div>
                     <button

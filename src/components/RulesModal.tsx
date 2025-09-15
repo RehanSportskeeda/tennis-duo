@@ -51,11 +51,11 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
           <ol className="space-y-4 text-gray-700">
             <li className="flex items-start gap-3">
               <span className="font-semibold text-lg">1.</span>
-              <span>Each row and column must have equal numbers of 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle mx-1" /></span>
+              <span>Each row and column must have equal numbers of 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle" /></span>
             </li>
             <li className="flex items-start gap-3">
               <span className="font-semibold text-lg">2.</span>
-              <span>No more than 2 consecutive 🎾 or <RacketIcon className="inline-block w-5 h-5 align-middle mx-1" /> (vertically or horizontally)</span>
+              <span>No more than 2 consecutive 🎾 or <RacketIcon className="inline-block w-5 h-5 align-middle" /> (vertically or horizontally)</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="font-semibold text-lg">3.</span>
@@ -86,7 +86,7 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
             <ul className="text-sm text-gray-600 space-y-1">
               <li>• Click a cell to cycle through values:</li>
               <li className="ml-4">1st click → 🎾</li>  
-              <li className="ml-4 flex items-center">2nd click → <RacketIcon className="inline-block w-4 h-4 align-middle ml-1" /></li>  
+              <li className="ml-4 flex items-center">2nd click → <RacketIcon className="inline-block w-4 h-4 align-middle" /></li>  
               <li className="ml-4">3rd click → Empty</li>
               <li>• Use hints if you get stuck (adds 15 sec to your time)</li>
               <li>• Try to solve without hints for the best score!</li>
