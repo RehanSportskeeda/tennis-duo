@@ -57,23 +57,30 @@ function App() {
   useEffect(() => {
     const loadDailyPuzzle = async () => {
       try {
+        console.log('🔍 APP DEBUG - Starting to load daily puzzle...');
         setPuzzleLoading(true);
         setPuzzleLoadErrorMessage('');
         const puzzle = await fetchDailyPuzzle();
+        console.log('🔍 APP DEBUG - fetchDailyPuzzle returned:', puzzle);
         if (puzzle) {
           setDailyPuzzleData(puzzle);
           setCurrentPuzzleDate(puzzle.date);
+          console.log('🔍 APP DEBUG - Set dailyPuzzleData to:', puzzle);
+          console.log('🔍 APP DEBUG - Set currentPuzzleDate to:', puzzle.date);
           trackPuzzleLoad(true, 'daily');
           trackGameStart('daily', puzzle.difficulty);
         } else {
+          console.log('🔍 APP DEBUG - No puzzle returned, setting error message');
           setPuzzleLoadErrorMessage('No valid puzzle found for today. The puzzle data may be malformed or missing.');
           trackPuzzleLoad(false, 'daily', 'No puzzle found for today');
         }
       } catch (error) {
         console.error('Failed to load daily puzzle:', error);
+        console.log('🔍 APP DEBUG - Error loading puzzle:', error.message);
         setPuzzleLoadErrorMessage(`Failed to load today's puzzle: ${error.message}`);
         trackPuzzleLoad(false, 'daily', error.message);
       } finally {
+        console.log('🔍 APP DEBUG - Finished loading puzzle, setting puzzleLoading to false');
         setPuzzleLoading(false);
       }
     };
