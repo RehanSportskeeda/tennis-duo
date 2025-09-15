@@ -8,6 +8,7 @@ import GameStatus from './GameStatus';
 import ArchivePopup from './ArchivePopup';
 import RulesModal from './RulesModal';
 import { trackCTAClick, trackRuleView } from '../utils/analytics';
+import RacketIcon from './RacketSvgIcon';
 
 interface GameTabProps {
   dailyPuzzleData: DailyPuzzleData | null;
