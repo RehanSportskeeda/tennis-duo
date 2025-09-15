@@ -83,7 +83,7 @@ const GameTab: React.FC<GameTabProps> = ({
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🎾 and rackets
+                      Fill the grid with 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle mx-1" />
                     </p>
                   </div>
                   <button
@@ -313,7 +313,7 @@ Can you beat my time? Play now:`;
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🎾 and rackets
+                      Fill the grid with 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle mx-1" />
                     </p>
                   </div>
                     <button

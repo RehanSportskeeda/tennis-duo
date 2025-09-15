@@ -91,7 +91,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       if (ballCount > racketCount) {
         messages.push(`${ballCount} 🎾 in column ${col + 1} (should be ${size/2})`);
       } else {
-        messages.push(`${racketCount} rackets in column ${col + 1} (should be ${size/2})`);
+        messages.push(<>{racketCount} <RacketIcon className="inline-block w-4 h-4 align-middle mx-1" /> in column {col + 1} (should be {size/2})</>);
       }
       for (let row = 0; row < size; row++) {
         violations.add(`${row},${col}`);
