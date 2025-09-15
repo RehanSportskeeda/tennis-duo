@@ -4,14 +4,14 @@ export interface DailyPuzzleData {
   preFilledCells: Array<{
     row: number;
     col: number;
-    value: 'goal' | 'stick';
+    value: 'ball' | 'racket';
   }>;
   constraints: Array<{
     type: 'equal' | 'different';
     cell1: [number, number];
     cell2: [number, number];
   }>;
-  solution: ('goal' | 'stick')[][];
+  solution: ('ball' | 'racket')[][];
 }
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQXrwTxkBTG8ymHlqL4BH2ivHdMt6GqQA4RIOa0osYW6zK93AUnPRKT9GKKKOvCybIXfwhsPR2pY7nz/pub?gid=580450764&single=true&output=csv';
@@ -45,7 +45,12 @@ export const fetchDailyPuzzle = async (): Promise<DailyPuzzleData | null> => {
           try {
             // Fix single quotes to double quotes for valid JSON
             const preFilledCellsJson = values[2].replace(/'/g, '"');
-            preFilledCells = JSON.parse(preFilledCellsJson);
+            const parsedPreFilledCells = JSON.parse(preFilledCellsJson);
+            // Map helmet -> racket, football -> ball
+            preFilledCells = parsedPreFilledCells.map(cell => ({
+              ...cell,
+              value: cell.value === 'helmet' ? 'racket' : cell.value === 'football' ? 'ball' : cell.value
+            }));
           } catch (error) {
           }
           
@@ -60,7 +65,11 @@ export const fetchDailyPuzzle = async (): Promise<DailyPuzzleData | null> => {
           try {
             // Fix single quotes to double quotes for valid JSON
             const solutionJson = values[4].replace(/'/g, '"');
-            solution = JSON.parse(solutionJson);
+            const parsedSolution = JSON.parse(solutionJson);
+            // Map helmet -> racket, football -> ball in solution
+            solution = parsedSolution.map(row => 
+              row.map(cell => cell === 'helmet' ? 'racket' : cell === 'football' ? 'ball' : cell)
+            );
           } catch (error) {
             throw new Error(`Invalid solution JSON: ${error.message}`);
           }
@@ -162,13 +171,22 @@ export const fetchPuzzleByDate = async (targetDate: string): Promise<DailyPuzzle
         try {
           // Parse the puzzle data (same logic as fetchDailyPuzzle)
           const preFilledCellsJson = values[2].replace(/'/g, '"');
-          const preFilledCells = JSON.parse(preFilledCellsJson);
+          const parsedPreFilledCells = JSON.parse(preFilledCellsJson);
+          // Map helmet -> racket, football -> ball
+          const preFilledCells = parsedPreFilledCells.map(cell => ({
+            ...cell,
+            value: cell.value === 'helmet' ? 'racket' : cell.value === 'football' ? 'ball' : cell.value
+          }));
           
           const constraintsJson = values[3].replace(/'/g, '"');
           const constraints = JSON.parse(constraintsJson);
           
           const solutionJson = values[4].replace(/'/g, '"');
-          const solution = JSON.parse(solutionJson);
+          const parsedSolution = JSON.parse(solutionJson);
+          // Map helmet -> racket, football -> ball in solution
+          const solution = parsedSolution.map(row => 
+            row.map(cell => cell === 'helmet' ? 'racket' : cell === 'football' ? 'ball' : cell)
+          );
           
           // Validate that pre-filled cells match the solution
           let hasValidationErrors = false;
