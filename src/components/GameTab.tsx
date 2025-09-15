@@ -270,6 +270,7 @@ Can you beat my time? Play now:`;
           )}
         </div>
         </div>
+        </div>
 
         {/* Rules Modal for guest users */}
         <RulesModal isOpen={showRules} onClose={() => setShowRules(false)} />
