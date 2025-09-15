@@ -30,7 +30,7 @@ const GameGrid: React.FC<GameGridProps> = ({
   };
   const renderCellContent = (cell: Cell) => {
     if (cell.value === 'ball') {
-      return <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow-400 rounded-full"></div>;
+      return <span className="text-2xl sm:text-3xl">🎾</span>;
     } else if (cell.value === 'racket') {
       return <RacketIcon className="w-8 h-8 sm:w-10 sm:h-10" />;
     }
