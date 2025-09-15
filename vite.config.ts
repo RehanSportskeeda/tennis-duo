@@ -5,7 +5,9 @@ import { resolve } from 'path';
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/games/tennis-duo/',
-  plugins: [react()],
+  plugins: [react({
+    svgr: true
+  })],
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
