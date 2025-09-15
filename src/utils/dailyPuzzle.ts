@@ -196,7 +196,7 @@ export const fetchPuzzleByDate = async (targetDate: string): Promise<DailyPuzzle
           const constraintsJson = values[3].replace(/'/g, '"');
           const constraints = JSON.parse(constraintsJson);
           
-          console.log('🔍 PREFILL DEBUG - fetchDailyPuzzle parsed data:', {
+          console.log('🔍 PREFILL DEBUG - fetchPuzzleByDate parsed data:', {
             date: values[0],
             size,
             preFilledCells,
