@@ -96,13 +96,16 @@ export const fetchDailyPuzzle = async (): Promise<DailyPuzzleData | null> => {
           difficulty: values[5] || 'Easy'
         };
         } catch (parseError) {
+          console.error('❌ PREFILL DEBUG - Parse error for today:', parseError);
           return null;
         }
       }
     }
     
+    console.log('❌ PREFILL DEBUG - No puzzle found for today:', today);
     return null; // No puzzle found for today
   } catch (error) {
+    console.error('❌ PREFILL DEBUG - Fetch error:', error);
     return null;
   }
 };
@@ -189,6 +192,18 @@ export const fetchPuzzleByDate = async (targetDate: string): Promise<DailyPuzzle
           if (isNaN(size) || size <= 0 || size > 20) {
             return null;
           }
+          
+          const constraintsJson = values[3].replace(/'/g, '"');
+          const constraints = JSON.parse(constraintsJson);
+          
+          console.log('🔍 PREFILL DEBUG - fetchDailyPuzzle parsed data:', {
+            date: values[0],
+            size,
+            preFilledCells,
+            constraints,
+            solutionSample: solution[0] // Just first row to avoid spam
+          });
+          
           return {
             date: values[0],
             size,
