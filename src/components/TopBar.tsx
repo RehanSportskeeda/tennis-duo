@@ -147,7 +147,6 @@ const TopBar: React.FC<TopBarProps> = ({
           </div>
         </div>
       </div>
-      </div>
 
       {/* Click outside to close user menu */}
       {showUserMenu && user && (
