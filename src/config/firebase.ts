@@ -23,7 +23,7 @@ const firestoreSettings: FirestoreSettings = {
 };
 
 export const db = initializeFirestore(app, firestoreSettings, 'leaderboards');
-export const nhlDb = initializeFirestore(app, firestoreSettings, 'nhl-leaderboards');
+export const tennisDb = initializeFirestore(app, firestoreSettings, 'tennis-leaderboards');
 export const auth = getAuth(app);
 
 // Only connect to emulators in development and if not already connected

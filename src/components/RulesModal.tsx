@@ -1,6 +1,7 @@
 import React from 'react';
 import { X } from 'lucide-react';
 import { trackModalOpen, trackModalClose } from '../utils/analytics';
+import RacketIcon from '../assets/racket.svg?react';
 
 interface RulesModalProps {
   isOpen: boolean;
@@ -38,11 +39,11 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
           </button>
           
           <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="text-2xl">🏒</span>
-            <h2 className="text-2xl font-bold text-white">NHL Duo Rules</h2>
+            <span className="text-2xl">🎾</span>
+            <h2 className="text-2xl font-bold text-white">Tennis Duo Rules</h2>
           </div>
           
-          <p className="text-gray-100">How to play NHL Duo</p>
+          <p className="text-gray-100">How to play Tennis Duo</p>
         </div>
         
         {/* Content */}
@@ -50,11 +51,11 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
           <ol className="space-y-4 text-gray-700">
             <li className="flex items-start gap-3">
               <span className="font-semibold text-lg">1.</span>
-              <span>Each row and column must have equal numbers of 🥅 and 🏒</span>
+              <span>Each row and column must have equal numbers of 🎾 and rackets</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="font-semibold text-lg">2.</span>
-              <span>No more than 2 consecutive 🥅 or 🏒 (vertically or horizontally)</span>
+              <span>No more than 2 consecutive 🎾 or rackets (vertically or horizontally)</span>
             </li>
             <li className="flex items-start gap-3">
               <span className="font-semibold text-lg">3.</span>
@@ -84,8 +85,8 @@ const RulesModal: React.FC<RulesModalProps> = ({ isOpen, onClose }) => {
             <h4 className="font-semibold text-gray-800 mb-2">Tips:</h4>
             <ul className="text-sm text-gray-600 space-y-1">
               <li>• Click a cell to cycle through values:</li>
-              <li className="ml-4">1st click → 🥅</li>  
-              <li className="ml-4">2nd click → 🏒</li>  
+              <li className="ml-4">1st click → 🎾</li>  
+              <li className="ml-4 flex items-center gap-2">2nd click → <RacketIcon className="inline-block w-4 h-4 align-middle" /></li>  
               <li className="ml-4">3rd click → Empty</li>
               <li>• Use hints if you get stuck (adds 15 sec to your time)</li>
               <li>• Try to solve without hints for the best score!</li>

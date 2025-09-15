@@ -27,10 +27,10 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'NHL' }) => {
             </div>
 
             <div className="footer-column">
-              <h3 className="footer-column-title">NHL Tools & Games</h3>
+              <h3 className="footer-column-title">Tennis Tools & Games</h3>
               <ul className="footer-links">
-                <li><a href="/">NHL Card Matching Game</a></li>
-                <li><a href="https://www.profootballnetwork.com/nhl-player-guessing-game/">NHL Player Guessing Game</a></li>
+                <li><a href="/">Tennis Card Matching Game</a></li>
+                <li><a href="https://www.profootballnetwork.com/tennis-player-guessing-game/">Tennis Player Guessing Game</a></li>
               </ul>
 
               <h3 className="footer-column-title footer-subheading">NFL Tools</h3>
@@ -80,22 +80,22 @@ const PFSNFooter: React.FC<FooterProps> = ({ currentPage = 'NHL' }) => {
                 <li><a href="https://www.profootballnetwork.com/privacy-policy/">Privacy Policy</a></li>
               </ul>
 
-              <h3 className="footer-column-title footer-subheading">NHL Resources</h3>
+              <h3 className="footer-column-title footer-subheading">Tennis Resources</h3>
               <ul className="footer-links">
-                <li><a href="https://www.profootballnetwork.com/nhl">NHL News</a></li>
-                <li><a href="https://www.profootballnetwork.com/nhl/standings">NHL Standings</a></li>
-                <li><a href="https://www.profootballnetwork.com/nhl/stats">NHL Stats</a></li>
+                <li><a href="https://www.profootballnetwork.com/tennis">Tennis News</a></li>
+                <li><a href="https://www.profootballnetwork.com/tennis/standings">Tennis Standings</a></li>
+                <li><a href="https://www.profootballnetwork.com/tennis/stats">Tennis Stats</a></li>
               </ul>
 
-              <h3 className="footer-column-title footer-subheading">NBA Tools</h3>
+              <h3 className="footer-column-title footer-subheading">Tennis Tools</h3>
               <ul className="footer-links">
-                <li><a href="https://www.profootballnetwork.com/nhl-mock-draft-simulator">NHL Mock Draft Simulator</a></li>
-                <li><a href="https://www.profootballnetwork.com/nhl-player-guessing-game">NHL Player Guessing Game</a></li>
+                <li><a href="https://www.profootballnetwork.com/tennis-mock-draft-simulator">Tennis Mock Draft Simulator</a></li>
+                <li><a href="https://www.profootballnetwork.com/tennis-player-guessing-game">Tennis Player Guessing Game</a></li>
               </ul>
 
-              <h3 className="footer-column-title footer-subheading">NHL Games</h3>
+              <h3 className="footer-column-title footer-subheading">Tennis Games</h3>
               <ul className="footer-links">
-                <li className="current-page"><a href="/">NHL Duo</a></li>
+                <li className="current-page"><a href="/">Tennis Duo</a></li>
               </ul>
             </div>
           </div>

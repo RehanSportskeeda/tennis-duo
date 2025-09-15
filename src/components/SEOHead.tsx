@@ -15,15 +15,15 @@ interface SEOHeadProps {
 }
 
 export function SEOHead({
-  title = 'NHL Duo - Daily Hockey Grid Game',
-  description = "NHL Duo is a fun, brain-teasing puzzle where you fill the grid by following logical rules. It's perfect for NHL fans who love a good challenge!",
-  image = 'https://www.profootballnetwork.com/games/nhl-duo/nhl-duo-og-image.png',
-  url = typeof window !== 'undefined' ? window.location.href : 'https://www.profootballnetwork.com/games/nhl-duo/',
+  title = 'Tennis Duo - Daily Tennis Grid Game',
+  description = "Tennis Duo is a fun, brain-teasing puzzle where you fill the grid by following logical rules. It's perfect for Tennis fans who love a good challenge!",
+  image = 'https://www.profootballnetwork.com/games/tennis-duo/tennis-duo-og-image.png',
+  url = typeof window !== 'undefined' ? window.location.href : 'https://www.profootballnetwork.com/games/tennis-duo/',
   type = 'website',
   siteName = 'Pro Football Network',
   twitterCard = 'summary_large_image',
   twitterSite = '@PFSN365',
-  keywords = 'NHL game, NHL daily challenge, hockey puzzle, NHL grid game, daily NHL game',
+  keywords = 'Tennis game, Tennis daily challenge, tennis puzzle, Tennis grid game, daily Tennis game',
   author = 'PFSN',
   canonical
 }: SEOHeadProps) {
@@ -70,7 +70,7 @@ export function SEOHead({
     updateMetaTag('twitter:card', twitterCard);
     updateMetaTag('twitter:title', title);
     updateMetaTag('twitter:description', description);
-    updateMetaTag('twitter:image', image.startsWith('http') ? image : `https://www.profootballnetwork.com/games/nhl-duo${image}`);
+    updateMetaTag('twitter:image', image.startsWith('http') ? image : `https://www.profootballnetwork.com/games/tennis-duo${image}`);
     updateMetaTag('twitter:site', twitterSite);
     updateMetaTag('twitter:creator', twitterSite);
 
@@ -153,7 +153,7 @@ export function SEOHead({
         },
         {
           '@type': 'SiteNavigationElement', 
-          'name': 'NHL Duo',
+          'name': 'Tennis Duo',
           'url': currentUrl,
           'position': 2
         }
