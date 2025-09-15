@@ -8,7 +8,7 @@ const RacketSvgIcon: React.FC<RacketSvgIconProps> = ({ className = "w-6 h-6" }) 
   return (
     <svg 
       className={className}
-      viewBox="0 0 1856 2425" 
+      viewBox="550 139 793 2129"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path fill="#E39A46" d="M915.016,1444.76c-2.88-127.094-46.765-233.491-79.212-295.315
