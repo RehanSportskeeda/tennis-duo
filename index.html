@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="https://www.profootballnetwork.com/favicon-nhl.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NHL Duo - Daily Hockey Grid Game</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="NHL Duo is a fun, brain-teasing puzzle where you fill the grid by following logical rules. It's perfect for NHL fans who love a good challenge!" />
+    <meta name="keywords" content="NHL game, NHL daily challenge, hockey puzzle, NHL grid game, daily NHL game" />
+    <meta name="author" content="PFSN" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="NHL Duo - Daily Hockey Grid Game" />
+    <meta property="og:description" content="NHL Duo is a fun, brain-teasing puzzle where you fill the grid by following logical rules. It's perfect for NHL fans who love a good challenge!" />
+    <meta property="og:image" content="https://www.profootballnetwork.com/games/nhl-duo/nhl-duo-og-image.png" />
+    <meta property="og:url" content="https://www.profootballnetwork.com/games/nhl-duo/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Pro Football Network" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="NHL Duo - Daily Hockey Grid Game" />
+    <meta name="twitter:description" content="NHL Duo is a fun, brain-teasing puzzle where you fill the grid by following logical rules. It's perfect for NHL fans who love a good challenge!" />
+    <meta name="twitter:image" content="https://www.profootballnetwork.com/games/nhl-duo/nhl-duo-og-image.png" />
+    <meta name="twitter:site" content="@PFSN365" />
+    <meta name="twitter:creator" content="@PFSN365" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.profootballnetwork.com/games/nhl-duo/" />
+    
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+    <link rel="preconnect" href="https://assets.govisibl.io" crossorigin>
+    <link rel="dns-prefetch" href="https://www.profootballnetwork.com">
+    
+    <!-- Preload critical Font Awesome CSS -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+    
+    <!-- Critical inline CSS for initial render -->
+    <style>
+      body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+      }
+      #root {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      /* Prevent layout shift for initial load */
+      .loading-skeleton {
+        animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.5; }
+      }
+    </style>
+    
+    <!-- Google Analytics GA4 -->
+    <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-94BYBHMYCW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-94BYBHMYCW');
+    </script>
+    <!-- Raptive (AdThrive) Script -->
+    <script>
+      // Only load Raptive script when not on localhost to avoid cross-origin errors
+      if (window.location.hostname !== 'localhost') {
+        (function(w, d) {
+          w.adthrive = w.adthrive || {};
+          w.adthrive.cmd = w.adthrive.cmd || [];
+          w.adthrive.plugin = 'adthrive-ads-manual';
+          w.adthrive.host = 'ads.adthrive.com';
+          var s = d.createElement('script');
+          s.async = true;
+          s.referrerpolicy = 'no-referrer-when-downgrade';
+          s.src = 'https://' + w.adthrive.host + '/sites/5e163f2211916d4860b8f332/ads.min.js?referrer=' + w.encodeURIComponent(w.location.href) + '&cb=' + (Math.floor(Math.random() * 100) + 1);
+          var n = d.getElementsByTagName('script')[0];
+          n.parentNode.insertBefore(s, n);
+        })(window, document);
+      }
+    </script>
+    <!-- Visibl Tracking Script -->
+    <script async defer src="https://assets.govisibl.io/scripts/dist/v1/sk.min.js?s=1&t=6008c3a6-0ddf-47a3-9146-2c4a38a74751"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
