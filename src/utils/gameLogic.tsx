@@ -2,6 +2,7 @@ import React from 'react';
 import { Cell, CellValue, Constraint, GameState, Puzzle } from '../types/game';
 import { DailyPuzzleData } from './dailyPuzzle';
 import RacketIcon from '../components/RacketSvgIcon';
+import TennisBallSvgIcon from '../components/TennisBallSvgIcon';
 
 export const HINT_PENALTY_SECONDS = 15;
 
@@ -32,7 +33,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       if (cell1.value && cell2.value && cell3.value &&
           cell1.value === cell2.value && cell2.value === cell3.value) {
         const symbol = cell1.value === 'ball' ? 
-          `3 consecutive 🎾 in row ${row + 1}` :
+          <>3 consecutive <TennisBallSvgIcon className="inline-block w-4 h-4 align-middle" /> in row {row + 1}</> :
           <>3 consecutive <RacketIcon className="inline-block w-4 h-4 align-middle" /> in row {row + 1}</>;
         messages.push(symbol);
         violations.add(`${row},${col}`);
@@ -51,7 +52,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       if (cell1.value && cell2.value && cell3.value &&
           cell1.value === cell2.value && cell2.value === cell3.value) {
         const symbol = cell1.value === 'ball' ? 
-          `3 consecutive 🎾 in column ${col + 1}` :
+          <>3 consecutive <TennisBallSvgIcon className="inline-block w-4 h-4 align-middle" /> in column {col + 1}</> :
           <>3 consecutive <RacketIcon className="inline-block w-4 h-4 align-middle" /> in column {col + 1}</>;
         messages.push(symbol);
         violations.add(`${row},${col}`);
@@ -71,7 +72,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       const ballCount = balls;
       const racketCount = rackets;
       if (ballCount > racketCount) {
-        messages.push(`${ballCount} 🎾 in row ${row + 1} (should be ${size/2})`);
+        messages.push(<>{ballCount} <TennisBallSvgIcon className="inline-block w-4 h-4 align-middle" /> in row {row + 1} (should be {size/2})</>);
       } else {
         messages.push(<>{racketCount} <RacketIcon className="inline-block w-4 h-4 align-middle" /> in row {row + 1} (should be {size/2})</>);
       }
@@ -90,7 +91,7 @@ export const validateGrid = (grid: Cell[][], constraints: Constraint[]): { viola
       const ballCount = balls;
       const racketCount = rackets;
       if (ballCount > racketCount) {
-        messages.push(`${ballCount} 🎾 in column ${col + 1} (should be ${size/2})`);
+        messages.push(<>{ballCount} <TennisBallSvgIcon className="inline-block w-4 h-4 align-middle" /> in column {col + 1} (should be {size/2})</>);
       } else {
         messages.push(<>{racketCount} <RacketIcon className="inline-block w-4 h-4 align-middle" /> in column {col + 1} (should be {size/2})</>);
       }
