@@ -9,6 +9,7 @@ import ArchivePopup from './ArchivePopup';
 import RulesModal from './RulesModal';
 import { trackCTAClick, trackRuleView } from '../utils/analytics';
 import RacketIcon from './RacketSvgIcon';
+import TennisBallSvgIcon from './TennisBallSvgIcon';
 
 interface GameTabProps {
   dailyPuzzleData: DailyPuzzleData | null;
@@ -84,7 +85,7 @@ const GameTab: React.FC<GameTabProps> = ({
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle" />
+                      Fill the grid with <TennisBallSvgIcon className="inline-block w-5 h-5 align-middle" /> and <RacketIcon className="inline-block w-5 h-5 align-middle" />
                     </p>
                   </div>
                   <button
@@ -315,7 +316,7 @@ Can you beat my time? Play now:`;
                       }
                     </h3>
                     <p className="text-gray-600">
-                      Fill the grid with 🎾 and <RacketIcon className="inline-block w-5 h-5 align-middle" />
+                      Fill the grid with <TennisBallSvgIcon className="inline-block w-5 h-5 align-middle" /> and <RacketIcon className="inline-block w-5 h-5 align-middle" />
                     </p>
                   </div>
                     <button

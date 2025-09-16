@@ -1,6 +1,7 @@
 import React from 'react';
 import { Cell, CellValue, ConstraintType } from '../types/game';
 import RacketIcon from './RacketSvgIcon';
+import TennisBallSvgIcon from './TennisBallSvgIcon';
 
 interface GameGridProps {
   grid: Cell[][];
@@ -30,7 +31,7 @@ const GameGrid: React.FC<GameGridProps> = ({
   };
   const renderCellContent = (cell: Cell) => {
     if (cell.value === 'ball') {
-      return <span className="text-2xl sm:text-3xl">🎾</span>;
+      return <TennisBallSvgIcon className="w-8 h-8 sm:w-10 sm:h-10" />;
     } else if (cell.value === 'racket') {
       return <RacketIcon className="w-8 h-8 sm:w-10 sm:h-10" />;
     }
