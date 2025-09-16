@@ -4,6 +4,7 @@ import { GameStats } from '../types/game';
 import { trackShare, trackCompletionScreenView, trackCompletionScreenAction, trackCTAClick } from '../utils/analytics';
 import ArchivePopup from './ArchivePopup';
 import { HINT_PENALTY_SECONDS } from '../utils/gameLogic';
+import TennisBallSvgIcon from './TennisBallSvgIcon';
 
 interface CompletionScreenProps {
   gameStats: GameStats;
@@ -126,7 +127,7 @@ Can you beat my time? Play now:`;
           </button>
           
           <div className="flex items-center justify-center gap-3 mb-2">
-            <span className="text-xl">🏀</span>
+            <TennisBallSvgIcon className="w-6 h-6" />
             <h2 className="text-2xl font-bold text-white">Game Completed!</h2>
           </div>
           <div className="flex items-center justify-center gap-2">
